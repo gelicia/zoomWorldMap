@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  background-color: #FFFFFF;
+}
+
+h1 {
+	font-size: 3.5em;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+h2 {
+	font-size: 3em;
+	margin-top:15px;
+	margin-bottom: 5px;
+}
+
+p {
+	margin-top: 0px;
+}
+
+a {
+  color: #428BCA;
+  text-decoration: none;
+}
+
+#left {
+position: absolute;
+left: 0;
+width: 100px;
+}
+
+#content {
+margin: 0 50px;
+border-top: none;
+background-color: #ffffff;   
+padding: 5px;
+}
+
+#right {
+position: absolute;
+right: 0;        
+width: 100px;
+background-color: #f9c;
+}
+
+div#vizContent{
+	position: relative;
+}
+
+div#intro {
+	margin-bottom: 20px;
+}
+
+.footer {
+	background-color: #E8E8E8;
+	margin-left: 3px;
+	margin-top: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-size: 10px;
+	clear: both;
+}
+
+.footer p {
+	margin-top: 10px;	
+}
+
+.strong{
+	font-weight: bold;
+}
+
+.label{
+	display: inline;
+	font-weight: bold;
+}
+
+.d3-tip {
+    font-size: 12px;
+    padding: 9px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 2px;
+    text-align: center;
+  }
+
+div#countrySelectDiv{
+	display: inline-block;
+}
+
+select#countrySelect{
+	width: 200px;
+}
+
+div#countryHeaderInfo{
+	z-index: 10;
+	position: absolute;
+	display: inline-block;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+#mapDiv {
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+svg#mapMain {
+	width : 800px;
+	height : 430px;
+}
+
+.validCountry {
+	fill: #FFF;
+}
+
+.invalidCountry {
+	fill: #CCC;
+}
+
+.selectedCountry {
+	fill: #6B66D4;
+	stroke: #5A55B5;
+	/*stroke-width: 15px;
+	stroke-linejoin: round;*/
+}

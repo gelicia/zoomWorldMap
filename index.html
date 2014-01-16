@@ -1,0 +1,49 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/2000/REC-xhtml1-20000126/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />   
+    <title>D3 World Map</title> 
+
+  <!-- 
+  CSS and HTML Template by miss monorom http://www.intensivstation.ch
+  This work is licensed under a Creative Commons License http://creativecommons.org/licenses/by/1.0/
+  -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/lib/jquery-1.9.1.js"></script>
+    <script src="js/lib/d3.v3.min.js"></script>
+    <script src="js/lib/topojson.v1.min.js"></script>
+    <script src="js/lib/underscore-min.js"></script>
+    <script type = "text/javascript" src="js/main.js"></script>
+  </head> 
+
+  <body onload="loadData();">
+   <h1>D3 Zooming World Map</h1>
+    <div id="left"></div>
+    <div id="content">
+      <div id="intro">
+        <p>Seitan meggings cred cliche, YOLO hoodie gluten-free. Sustainable hashtag aliquip photo booth. Commodo pariatur ut, gastropub butcher ethical eiusmod deep v Schlitz keytar eu Etsy roof party. Trust fund YOLO sustainable, freegan leggings eiusmod hashtag tofu. Tempor officia id ut Banksy, Williamsburg sunt banjo. Meh occaecat Banksy, adipisicing pour-over roof party dolor disrupt chillwave Schlitz scenester ut sapiente. Drinking vinegar vero ea, distillery cray ut delectus.</p>
+      </div>
+      <div id="vizContent">
+        <div id="countrySelectDiv">
+          <p class="label">Sort</p>
+          <select onchange="sortAndDisplayCountries(this.options[this.selectedIndex].value)">
+            <option value="alpha" selected>Alphabetically</option>
+            <option value="income">By Income Group</option>
+            <option value="region">By Region</option>
+          </select><br/>
+          <select id="countrySelect" size="30" onclick="selectLocationScope(this.options[this.selectedIndex].value)"></select>
+        </div>
+        <div id="countryHeaderInfo"><h2 id="countryNameDisp"></h2></div>
+        <div id="mapDiv">
+          <svg id="mapMain"></svg>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>hello</p>
+    </div>
+  </body>
+</html>
