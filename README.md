@@ -13,7 +13,7 @@ Todo
 
 Bugs
 ----
-- [ ] Moving from one place to another doesn't always move to the same way (like click Australia, then New Zealand)
+- [ ] Moving from one place to another doesn't always move to the same way (like click Australia, then New Zealand. Russia to Norway also screws it up)
 - [ ] Zooming in and out doesn't transition the outlines correctly
 
 Map from https://gist.github.com/mbostock/4090846 
