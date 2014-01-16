@@ -90,9 +90,8 @@ function sortAndDisplayCountries(searchOpt){
 }
 
 function selectLocationScope(id){
-	if (active && active.id == id){
-		$('#countrySelect option').prop("selected", false);
-	}
+	//in case it was a map click, select the value
+	$('#countrySelect option[value=' + id + ']').prop("selected", true);
 
 	var thisCountryData = _.find(countryData, function(d){ return d.mapID == id;});
 
@@ -128,7 +127,13 @@ function loadMap(){
 				return thisData === undefined ? "invalidCountry" : "validCountry";
 			}
 		})
-		.on('click', mapClick);
+		.on('click', function(d){
+			if ( _.find(countryData, function(fd){ return d.id == fd.mapID;}) !== undefined){
+				selectLocationScope(d.id);
+			}
+		}
+
+		);//mapClick);
 	});
 }
 
@@ -165,7 +170,6 @@ function mapClick(d) {
         .duration(500)
         .tween("rotate", function() {
 			var endNumber = mouseClick[0] < 400 ? 180 : -180;
-			console.log(endNumber)
 			var r = d3.interpolateNumber(0, endNumber);
 			return function(t) {
 				projection.rotate([r(t), 0, 0]);
@@ -202,6 +206,8 @@ function mapClick(d) {
 function resetMap() {
 	active = undefined;
 	var g = d3.select("svg#mapMain > g");
+	$('#countrySelect option').prop("selected", false);
+	d3.select("h2#countryNameDisp").text('');
 
 	if (Math.abs(projection.rotate()[0]) == 180){
 		d3.transition()
