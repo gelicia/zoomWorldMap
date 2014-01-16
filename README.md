@@ -8,7 +8,7 @@ Wishlist
 
 Todo
 ----
-- [ ] Select sync between the map and the multi-select box
+- [x] Select sync between the map and the multi-select box
 - [ ] Disable clicking while the transition is happening
 
 Bugs
