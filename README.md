@@ -15,6 +15,7 @@ Bugs
 ----
 - [ ] Moving from one place to another doesn't always move to the same way (like click Australia, then New Zealand. Russia to Norway also screws it up)
 - [ ] Zooming in and out doesn't transition the outlines correctly
+- [ ] It makes FF die D: 
 
 Map from https://gist.github.com/mbostock/4090846 
 map projection tween http://bl.ocks.org/mbostock/3711652
